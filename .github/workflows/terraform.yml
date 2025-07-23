@@ -19,6 +19,6 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
       - run: terraform init
       - id: plan
-        run: terraform plan -no-color
+        run: terraform plan -no-color -out ./tfplan 
       - name: terraform-output
         uses: dflook/terraform-output@v2.1.0
